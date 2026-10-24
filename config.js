@@ -5,7 +5,7 @@
 window.PAI_LIAM_CONFIG = {
   brandName: "Pai Liam",
   siteTitle: "Pai Liam | Amarração amorosa",
-  siteDescription: "Conheça o trabalho de amarração amorosa com Pai Liam. Atendimento pelo WhatsApp, vídeo antes do pagamento e garantia de 30 dias.",
+  siteDescription: "Conheça o trabalho de amarração amorosa com Pai Liam. Atendimento pelo WhatsApp, pagamento após receber o vídeo e garantia de 30 dias.",
   timeZone: "America/Sao_Paulo",
   experienceYears: 20,
   offer: {

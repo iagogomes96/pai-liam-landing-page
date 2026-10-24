@@ -480,6 +480,23 @@ h1 { max-width: 650px; margin-bottom: 18px; font-size: clamp(42px,5.1vw,68px); f
 .desktop-whatsapp-float:focus-visible { outline: 3px solid #237ca0; outline-offset: 3px; }
 @media (max-width: 980px) { .desktop-whatsapp-float { display: none; } }
 
+/* Oferta e garantia: conteúdo aprovado pelo cliente */
+.hero-offer-card > * { position: relative; z-index: 1; }
+.hero-offer-card .offer-kicker { max-width: none; }
+.hero-offer-card .offer-kicker span { display: block; }
+.hero-offer-card .offer-kicker span:first-child { white-space: nowrap; }
+.hero-offer-rule { margin-block: 22px 18px; }
+.hero-offer-services { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; margin: 0; padding: 0; list-style: none; }
+.hero-offer-services li { min-height: 46px; display: flex; align-items: center; gap: 8px; padding: 8px 10px; border: 1px solid rgb(244 219 164 / 32%); border-radius: 7px; color: #fff9f0; background: rgb(255 255 255 / 6%); font-size: 12px; font-weight: 700; line-height: 1.3; }
+.hero-offer-services li::before { flex: none; color: #ebcc84; content: "✦"; font-size: 10px; }
+.hero-offer-payment { margin: 23px 0 0; padding-left: 14px; border-left: 2px solid #e4be72; color: #fff9e9; font: 700 16px/1.35 var(--serif); }
+.hero-offer-payment strong { color: #f9d98f; font-weight: 800; text-decoration: underline; text-decoration-color: #d4ab5d; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.hero-offer-assurances { display: grid; gap: 6px; margin: 16px 0 0; padding: 0; list-style: none; }
+.hero-offer-assurances li { display: flex; gap: 8px; color: #eee3ef; font-size: 11px; line-height: 1.4; }
+.hero-offer-assurances li::before { flex: none; color: #e9c881; content: "✓"; font-weight: 900; }
+.guarantee-emblem strong small { letter-spacing: .11em; white-space: nowrap; }
+.guarantee-points li { max-width: 100%; }
+
 @media (max-width: 760px) {
   .hero-action { gap: 9px; margin-top: 22px; }
   .hero-action p { font-size: 18px; }
@@ -503,6 +520,15 @@ h1 { max-width: 650px; margin-bottom: 18px; font-size: clamp(42px,5.1vw,68px); f
   .desktop-whatsapp-float { display: none; }
   .footer-bottom { align-items: center; text-align: center; }
   .footer-credit { justify-content: center; }
+  .hero-offer-card .offer-kicker { font-size: 29px; }
+  .hero-offer-services { gap: 8px; }
+  .hero-offer-services li { min-height: 44px; padding: 7px 8px; font-size: 11px; }
+  .hero-offer-payment { margin-top: 20px; font-size: 15px; }
+  .hero-offer-assurances { gap: 5px; margin-top: 14px; }
+  .hero-offer-assurances li { font-size: 10.5px; }
+}
+@media (max-width: 360px) {
+  .hero-offer-card .offer-kicker { font-size: 26px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-offer-top span:last-child,.inline-cta::before,.inline-cta::after { animation: none !important; }
