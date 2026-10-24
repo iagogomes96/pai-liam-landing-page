@@ -181,10 +181,9 @@ h1 { max-width: 650px; margin-bottom: 18px; font-size: clamp(42px,5.1vw,68px); f
 .footer-column { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
 .footer-column strong { margin: 7px 0 6px; color: #15366e; font-size: 11px; letter-spacing: .12em; }
 .footer-column a,.footer-column span { color: #657087; text-decoration: none; }
-.footer-column a:hover,.footer-bottom a:hover { text-decoration: underline; }
+.footer-column a:hover { text-decoration: underline; }
 .footer-bottom { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; padding-top: 17px; border-top: 1px solid #e0e5ef; color: #778095; font-size: 11px; }
 .footer-bottom p { margin: 0; }
-.footer-bottom a { color: #62718d; text-decoration: none; }
 .mobile-cta-bar { display: none; }
 @media (max-width: 980px) {
   .hero { min-height: 590px; gap: 38px; }
@@ -464,11 +463,6 @@ h1 { max-width: 650px; margin-bottom: 18px; font-size: clamp(42px,5.1vw,68px); f
 .carousel-status { margin-top: 4px; }
 .carousel-status span { display: inline-flex; align-items: center; justify-content: center; min-height: 33px; padding: 7px 14px; border: 1px solid #d6c8dd; border-radius: 6px; color: #4d3a63; background: #fffaf3; font-size: 12px; font-weight: 750; }
 
-.footer-credit { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; }
-.nebulabs-credit { display: inline-flex; align-items: center; gap: 7px; color: #123e80 !important; font-size: 13px; font-weight: 850; letter-spacing: -.025em; text-decoration: none !important; }
-.nebulabs-mark { width: 30px; height: 30px; flex: none; object-fit: contain; border-radius: 6px; }
-.nebulabs-credit:hover strong { text-decoration: underline; text-underline-offset: 3px; }
-
 .button-whatsapp-icon { width: 20px; height: 20px; flex: none; }
 .faq-inner details { position: relative; border-bottom: 0; }
 .faq-inner details::after { position: absolute; right: 46px; bottom: 0; left: 0; height: 1px; background: #e5dce8; content: ""; pointer-events: none; }
@@ -491,13 +485,23 @@ h1 { max-width: 650px; margin-bottom: 18px; font-size: clamp(42px,5.1vw,68px); f
 .hero-offer-services li::before { flex: none; color: #ebcc84; content: "✦"; font-size: 10px; }
 .hero-offer-payment { margin: 23px 0 0; padding-left: 14px; border-left: 2px solid #e4be72; color: #fff9e9; font: 700 16px/1.35 var(--serif); }
 .hero-offer-payment strong { color: #f9d98f; font-weight: 800; text-decoration: underline; text-decoration-color: #d4ab5d; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.hero-offer-results { width: fit-content; display: flex; align-items: baseline; gap: 5px; margin: 13px 0 0; padding: 9px 12px; border: 1px solid rgb(239 203 128 / 62%); border-radius: 7px; color: #fff4dd; background: rgb(235 195 115 / 12%); font-size: 11px; font-weight: 800; letter-spacing: .045em; text-transform: uppercase; }
+.hero-offer-results strong { color: #ffe1a0; font-size: 16px; font-weight: 900; letter-spacing: .015em; white-space: nowrap; }
 .hero-offer-assurances { display: grid; gap: 6px; margin: 16px 0 0; padding: 0; list-style: none; }
 .hero-offer-assurances li { display: flex; gap: 8px; color: #eee3ef; font-size: 11px; line-height: 1.4; }
 .hero-offer-assurances li::before { flex: none; color: #e9c881; content: "✓"; font-weight: 900; }
 .guarantee-emblem strong small { letter-spacing: .11em; white-space: nowrap; }
 .guarantee-points li { max-width: 100%; }
+.steps { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.footer-main { row-gap: 30px; }
+.footer-disclaimer { grid-column: 1/-1; padding: 17px 20px; border: 1px solid #766b8b; border-left: 3px solid #d1b277; border-radius: 10px; color: #f4eff9; background: #30283f; box-shadow: 0 8px 24px rgb(38 29 53 / 8%); }
+.footer-disclaimer p { margin: 0; font-size: 12px; line-height: 1.7; }
+.footer-disclaimer strong { color: #f1d596; }
+.footer-disclaimer a { color: #f1d596; text-underline-offset: 3px; }
+.footer-bottom { display: flex; justify-content: center; align-items: center; text-align: center; }
 
 @media (max-width: 760px) {
+  .steps { grid-template-columns: 1fr; }
   .hero-action { gap: 9px; margin-top: 22px; }
   .hero-action p { font-size: 18px; }
   .hero-action > span { font-size: 11px; }
@@ -519,13 +523,16 @@ h1 { max-width: 650px; margin-bottom: 18px; font-size: clamp(42px,5.1vw,68px); f
   .final-cta { padding-bottom: 115px; }
   .desktop-whatsapp-float { display: none; }
   .footer-bottom { align-items: center; text-align: center; }
-  .footer-credit { justify-content: center; }
   .hero-offer-card .offer-kicker { font-size: 29px; }
   .hero-offer-services { gap: 8px; }
   .hero-offer-services li { min-height: 44px; padding: 7px 8px; font-size: 11px; }
   .hero-offer-payment { margin-top: 20px; font-size: 15px; }
+  .hero-offer-results { margin-top: 12px; padding: 8px 10px; font-size: 10px; }
+  .hero-offer-results strong { font-size: 15px; }
   .hero-offer-assurances { gap: 5px; margin-top: 14px; }
   .hero-offer-assurances li { font-size: 10.5px; }
+  .footer-disclaimer { padding: 15px 16px; }
+  .footer-disclaimer p { font-size: 12px; line-height: 1.65; }
 }
 @media (max-width: 360px) {
   .hero-offer-card .offer-kicker { font-size: 26px; }

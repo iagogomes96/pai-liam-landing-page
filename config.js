@@ -11,6 +11,7 @@ window.PAI_LIAM_CONFIG = {
   offer: {
     regularPrice: 599,
     promotionalPrice: 150,
+    resultsStartDays: 3,
     scarcityLabel: "Vagas limitadas",
   },
   guarantee: {
@@ -45,7 +46,6 @@ window.PAI_LIAM_CONFIG = {
     conversionEvent: "whatsapp_click"
   },
   privacyUrl: "",
-  nebulabsUrl: "https://nebulabs.dev.br/",
   youtubeVideos: [
     {
       id: "uEVpCtoCJb8",

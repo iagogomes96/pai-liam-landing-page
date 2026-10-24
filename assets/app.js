@@ -21,6 +21,7 @@
   setText("[data-experience]", config.experienceYears);
   setText("[data-price='regular']", money(offer.regularPrice));
   setText("[data-price='promotional']", money(offer.promotionalPrice));
+  setText("[data-result-days]", offer.resultsStartDays);
   setText("[data-guarantee-days]", guarantee.days);
   setText("[data-refund-percent]", guarantee.refundPercent);
   setText("[data-scarcity]", offer.scarcityLabel);
@@ -117,11 +118,9 @@
     privacyLink.href = config.privacyUrl;
     privacyLink.textContent = "Política de Privacidade";
     privacyLink.rel = "noopener noreferrer";
-    privacyNode.append(" · ", privacyLink);
+    privacyNode.hidden = false;
+    privacyNode.append(" ", privacyLink);
   }
-  const nebulabsLink = document.querySelector("[data-nebulabs-link]");
-  if (nebulabsLink && config.nebulabsUrl) nebulabsLink.href = config.nebulabsUrl;
-
   const gtmId = String((config.analytics || {}).gtmContainerId || "").trim();
   if (/^GTM-[A-Z0-9]+$/.test(gtmId)) {
     window.dataLayer = window.dataLayer || [];
